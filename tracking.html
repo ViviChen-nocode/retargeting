@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>追蹤原理｜Retarget Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-apple-180x180.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="tracking">
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="dot"></span>
+        Retarget Lab
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="what-is.html">什麼是再行銷</a>
+        <a href="tracking.html">追蹤原理</a>
+        <a href="tools.html">埋設方式</a>
+        <a href="gtm.html">GTM 操作</a>
+        <a href="practice.html">實務補充</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>為什麼可以被追蹤？</h1>
+      <p>之所以能被追蹤，是因為瀏覽器或裝置會留下可辨識的識別訊號，搭配事件回傳，平台就能把同一位使用者的行為串起來。</p>
+      <div class="progress-mini" data-progress-summary-mini>目前進度：0 / 5</div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">三個關鍵組成</h2>
+      <p class="section-subtitle">掌握識別、事件、回傳三個核心邏輯，才能建立可控且可解釋的追蹤設計，並確保後續名單可被正確使用。</p>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <h3>識別</h3>
+          <p>透過 Cookie 或裝置 ID 記住「這是一樣的人」。</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>事件</h3>
+          <p>瀏覽商品、加入購物車、送出表單，每個動作都可以成為再行銷條件。</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>回傳</h3>
+          <p>把事件回傳到廣告平台，形成可被使用的再行銷名單。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">追蹤流程示意</h2>
+      <p class="section-subtitle">流程圖協助團隊對齊追蹤路徑，清楚看到事件如何從網站回到平台，降低埋設與投放之間的落差。</p>
+      <div class="diagram" data-reveal>
+        <svg viewBox="0 0 760 240" width="100%" height="240" aria-label="追蹤流程">
+          <rect x="30" y="40" width="210" height="80" rx="16" fill="#dbeafe" />
+          <text x="135" y="85" text-anchor="middle" font-size="15">使用者進站</text>
+          <rect x="275" y="40" width="210" height="80" rx="16" fill="#fde68a" />
+          <text x="380" y="85" text-anchor="middle" font-size="15">Pixel/Tag記錄</text>
+          <rect x="520" y="40" width="210" height="80" rx="16" fill="#fecaca" />
+          <text x="625" y="85" text-anchor="middle" font-size="15">回傳到平台</text>
+          <rect x="275" y="150" width="210" height="60" rx="16" fill="#bbf7d0" />
+          <text x="380" y="185" text-anchor="middle" font-size="15">建立受眾名單</text>
+          <path d="M240 80 H275" stroke="#ff6b6b" stroke-width="5" />
+          <path d="M485 80 H520" stroke="#ff6b6b" stroke-width="5" />
+          <path d="M380 120 V150" stroke="#ff6b6b" stroke-width="5" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">限制與風險</h2>
+      <p class="section-subtitle">管理層需要理解限制與風險，才能合理設定成效期待值，避免因追蹤缺口造成誤判。</p>
+      <div class="accordion">
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            使用者同意與隱私
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            需要在網站上提供清楚的隱私/同意機制，避免未告知就蒐集資料。
+          </div>
+        </div>
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            追蹤完整度
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            瀏覽器封鎖、廣告阻擋器都可能影響追蹤，建議搭配多種回傳方式。
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="hero-card" data-reveal>
+      <h2>下一步：埋設方式</h2>
+      <p>了解常見 Pixel / Tag 的埋設方式，讓追蹤訊號真的被記到。</p>
+      <div class="cta-row">
+        <a class="btn" href="tools.html">前往埋設方式</a>
+        <a class="btn secondary" href="practice.html">實務補充重點</a>
+      </div>
+    </div>
+    <p class="credit">
+      Made with ❤️ by
+      <a href="https://www.facebook.com/vivichen.sister" target="_blank" rel="noopener noreferrer">Vivi Chen 大師姐</a>
+      | © 2026
+    </p>
+  </footer>
+
+  <a class="floating-mascot" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=026adbfw" target="_blank" rel="noopener noreferrer" aria-label="聯繫大師姐">
+    <div class="bubble">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="line-icon" aria-hidden="true">
+        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.285-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+      </svg>
+      需要再行銷協助嗎？
+    </div>
+    <img src="assets/mascot.png" alt="小助手" />
+  </a>
+
+  <script src="js/app.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>

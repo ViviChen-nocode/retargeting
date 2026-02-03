@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>埋設方式｜Retarget Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-apple-180x180.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="tools">
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="dot"></span>
+        Retarget Lab
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="what-is.html">什麼是再行銷</a>
+        <a href="tracking.html">追蹤原理</a>
+        <a href="tools.html">埋設方式</a>
+        <a href="gtm.html">GTM 操作</a>
+        <a href="practice.html">實務補充</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>常見埋設方式</h1>
+      <p>先理解「要埋什麼」，再選擇 Pixel / Tag / GTM 的路徑。</p>
+      <div class="progress-mini" data-progress-summary-mini>目前進度：0 / 5</div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">埋設的三件事</h2>
+      <p class="section-subtitle">策略先於工具，先定義事件與目標，再決定放置位置與驗證方法，避免追蹤碼存在卻無法產生可用名單。</p>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <h3>事件清單</h3>
+          <p>先決定要追蹤的行為：瀏覽內容、加入購物車、完成購買、送出表單。</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>埋設位置</h3>
+          <p>網站每個頁面都要放基底碼，關鍵頁加事件碼。</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3>驗證工具</h3>
+          <p>用平台的診斷工具確認事件有被觸發與回傳。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Meta Pixel & Google Tag</h2>
+      <p class="section-subtitle">平台差異不大，關鍵是事件設計與名單策略的一致性，讓不同平台的數據能互相比對。</p>
+      <div class="accordion">
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            Meta Pixel（基底碼 + 事件）
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            先埋「基底碼」，讓所有頁面都能被識別；再在特定頁面埋事件碼，
+            例如 ViewContent、AddToCart、Purchase。
+          </div>
+        </div>
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            Google Tag（全站標籤 + 事件）
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            建議在全站放置 Google Tag，並為關鍵行為設定事件，
+            例如 view_item、add_to_cart、purchase。
+          </div>
+        </div>
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            怎麼選？
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            以投放平台為主：要投 Meta 就要 Pixel，要投 Google 就要 Tag。
+            同時投放就可同時埋設，或用 GTM 統一管理。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">LINE Tag</h2>
+      <p class="section-subtitle">在台灣常見的 LINE Ads Platform 投放，建議同步規劃 LINE Tag。</p>
+      <div class="accordion">
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            LINE Tag 是什麼？
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            LINE Tag 用來回傳網站行為事件，建立 LINE 內的再行銷名單與轉換追蹤。
+          </div>
+        </div>
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            埋設邏輯
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            與 Pixel / Google Tag 類似，先放全站基底碼，再在關鍵頁面加入事件回傳。
+          </div>
+        </div>
+        <div class="accordion-item" data-reveal>
+          <div class="accordion-header">
+            什麼情境適合？
+            <span>＋</span>
+          </div>
+          <div class="accordion-content">
+            若投放 LINE Ads Platform，建議同步埋設，避免名單無法回傳。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">埋設步驟（簡化版）</h2>
+      <p class="section-subtitle">建立標準流程可降低跨團隊溝通成本與重工風險，確保埋設後能快速驗證與修正。</p>
+      <div class="stepper">
+        <div class="step" data-reveal>
+          <span class="badge">Step 1</span>
+          <h3>建立 Pixel / Tag</h3>
+          <p>在平台後台建立你的追蹤代碼。</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="badge">Step 2</span>
+          <h3>放入網站（或 GTM）</h3>
+          <p>基底碼放在所有頁面，事件碼放在指定行為頁。</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="badge">Step 3</span>
+          <h3>驗證與測試</h3>
+          <p>用平台診斷工具確認事件有被觸發並且回傳。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="hero-card" data-reveal>
+      <h2>下一步：GTM 管理</h2>
+      <p>把多平台埋設集中在 GTM，一次設定、全站生效。</p>
+      <div class="cta-row">
+        <a class="btn" href="gtm.html">前往 GTM 操作</a>
+        <a class="btn secondary" href="index.html">回到首頁</a>
+      </div>
+    </div>
+    <p class="credit">
+      Made with ❤️ by
+      <a href="https://www.facebook.com/vivichen.sister" target="_blank" rel="noopener noreferrer">Vivi Chen 大師姐</a>
+      | © 2026
+    </p>
+  </footer>
+
+  <a class="floating-mascot" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=026adbfw" target="_blank" rel="noopener noreferrer" aria-label="聯繫大師姐">
+    <div class="bubble">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="line-icon" aria-hidden="true">
+        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.285-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+      </svg>
+      需要再行銷協助嗎？
+    </div>
+    <img src="assets/mascot.png" alt="小助手" />
+  </a>
+
+  <script src="js/app.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>
