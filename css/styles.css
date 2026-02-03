@@ -216,6 +216,15 @@ header {
   box-shadow: inset 3px 3px 10px rgba(0,0,0,0.08);
 }
 
+.diagram img {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
 .accordion {
   display: grid;
   gap: 12px;
@@ -419,6 +428,66 @@ header {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.tabs {
+  background: #fff;
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 10px 10px 25px var(--shadow-dark), -8px -8px 22px var(--shadow-light);
+}
+
+.tab-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.tab-btn {
+  border: none;
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #fff7ed;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
+}
+
+.tab-btn:hover {
+  transform: translateY(-2px);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-sub {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.tab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.tab-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.06);
 }
 
 @media (max-width: 780px) {

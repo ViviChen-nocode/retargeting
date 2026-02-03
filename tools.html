@@ -58,71 +58,66 @@
     </section>
 
     <section class="section">
-      <h2 class="section-title">Meta Pixel & Google Tag</h2>
-      <p class="section-subtitle">平台差異不大，關鍵是事件設計與名單策略的一致性，讓不同平台的數據能互相比對。</p>
-      <div class="accordion">
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            Meta Pixel 基底碼 + 事件
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            先埋「基底碼」，讓所有頁面都能被識別；再在特定頁面埋事件碼，
-            例如 ViewContent、AddToCart、Purchase。
+      <h2 class="section-title">常見追蹤碼比較</h2>
+      <p class="section-subtitle">三個平台的核心邏輯相同，可直接切換標籤快速對照。</p>
+      <div class="tabs" data-tabs>
+        <div class="tab-list" role="tablist">
+          <button class="tab-btn active" role="tab" data-tab-target="meta">Meta Pixel</button>
+          <button class="tab-btn" role="tab" data-tab-target="google">Google Tag</button>
+          <button class="tab-btn" role="tab" data-tab-target="line">LINE Tag</button>
+        </div>
+        <div class="tab-panel active" role="tabpanel" data-tab-panel="meta">
+          <h3>Meta Pixel</h3>
+          <p class="tab-sub">針對 Meta 投放平台的追蹤工具，核心是基底碼與事件的正確回傳。</p>
+          <div class="tab-grid">
+            <div class="tab-card">
+              <strong>是什麼</strong>
+              <p>回傳網站行為事件，建立再行銷名單與轉換追蹤。</p>
+            </div>
+            <div class="tab-card">
+              <strong>埋設邏輯</strong>
+              <p>先埋全站基底碼，再在關鍵頁面加入事件回傳。</p>
+            </div>
+            <div class="tab-card">
+              <strong>適用情境</strong>
+              <p>主要投放在 Meta 平台時，Pixel 是必備名單來源。</p>
+            </div>
           </div>
         </div>
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            Google Tag 全站標籤 + 事件
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            建議在全站放置 Google Tag，並為關鍵行為設定事件，
-            例如 view_item、add_to_cart、purchase。
-          </div>
-        </div>
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            怎麼選？
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            以投放平台為主：要投 Meta 就要 Pixel，要投 Google 就要 Tag。
-            同時投放就可同時埋設，或用 GTM 統一管理。
+        <div class="tab-panel" role="tabpanel" data-tab-panel="google">
+          <h3>Google Tag</h3>
+          <p class="tab-sub">針對 Google Ads 與相關產品的追蹤方式，重點在全站標籤與事件一致性。</p>
+          <div class="tab-grid">
+            <div class="tab-card">
+              <strong>是什麼</strong>
+              <p>回傳網站事件，建立再行銷名單並支援轉換追蹤。</p>
+            </div>
+            <div class="tab-card">
+              <strong>埋設邏輯</strong>
+              <p>全站放置 Google Tag，並為關鍵行為設定事件。</p>
+            </div>
+            <div class="tab-card">
+              <strong>適用情境</strong>
+              <p>投放在 Google Ads 或需要跨產品整合時為必要基礎。</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">LINE Tag</h2>
-      <p class="section-subtitle">在台灣常見的 LINE Ads Platform 投放，建議同步規劃 LINE Tag。</p>
-      <div class="accordion">
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            LINE Tag 是什麼？
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            LINE Tag 用來回傳網站行為事件，建立 LINE 內的再行銷名單與轉換追蹤。
-          </div>
-        </div>
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            埋設邏輯
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            與 Pixel / Google Tag 類似，先放全站基底碼，再在關鍵頁面加入事件回傳。
-          </div>
-        </div>
-        <div class="accordion-item" data-reveal>
-          <div class="accordion-header">
-            什麼情境適合？
-            <span>＋</span>
-          </div>
-          <div class="accordion-content">
-            若投放 LINE Ads Platform，建議同步埋設，避免名單無法回傳。
+        <div class="tab-panel" role="tabpanel" data-tab-panel="line">
+          <h3>LINE Tag</h3>
+          <p class="tab-sub">台灣常見的 LINE Ads Platform 投放，建議同步規劃 LINE Tag。</p>
+          <div class="tab-grid">
+            <div class="tab-card">
+              <strong>是什麼</strong>
+              <p>回傳網站行為事件，建立 LINE 內的再行銷名單與轉換追蹤。</p>
+            </div>
+            <div class="tab-card">
+              <strong>埋設邏輯</strong>
+              <p>先放全站基底碼，再在關鍵頁面加入事件回傳。</p>
+            </div>
+            <div class="tab-card">
+              <strong>適用情境</strong>
+              <p>投放 LINE Ads Platform 時建議同步埋設。</p>
+            </div>
           </div>
         </div>
       </div>

@@ -30,3 +30,19 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 revealItems.forEach((item) => observer.observe(item));
+
+const tabGroups = document.querySelectorAll('[data-tabs]');
+tabGroups.forEach((group) => {
+  const buttons = group.querySelectorAll('.tab-btn');
+  const panels = group.querySelectorAll('.tab-panel');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-tab-target');
+      buttons.forEach((b) => b.classList.remove('active'));
+      panels.forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = group.querySelector(`[data-tab-panel=\"${target}\"]`);
+      if (panel) panel.classList.add('active');
+    });
+  });
+});
